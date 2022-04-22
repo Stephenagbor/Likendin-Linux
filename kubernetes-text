@@ -1,0 +1,97 @@
+#!bin/bash
+
+
+# This fie was created by Steve on 04-22-22
+
+# This file creates Kubernetes commands 
+
+
+
+# To Begin
+
+minikube start
+
+minikube status
+
+kubectl get nodes or kubectl get no: gives you all nodes
+
+kubectl get namespace or kunectl get ns: Gives you the namespace
+
+kubectl create ns dev: creates a namespace called dev
+
+kubectl config set-context--current --namespace=dev: Takes you to the nomespace called dev
+
+kubectl get ns: Gives you the namespace once more
+
+kubectl get pods or kubectl get po: list out ask your pods
+
+mkdir test-practice
+
+cd test-practice
+
+code .
+
+# In VSC
+
+Create a file called pod.yaml
+
+add documentation to pod.yaml using k8s ins drop box, edit file and add an image from your docker account
+
+# Open New Terminal on VSC
+ls to see contents of the file
+
+kubectl create -f pod.yaml: Creates the pod yaml
+
+kubectl get pod or kubectl get po: You see if the pod is running
+
+kubectl describe pod (name of pod) ie my-web-1: Gives details of pod
+
+kubectl delete -f pod.yaml: Deletes pod
+
+# Creating a Deployment
+
+create a file called deployment.yaml and add contents on the drop box using k8s.
+Edit file to suit needs and interests
+create a file called service.yaml and add contents from the drop bos using k8s. Edit file to suit your needs and interests
+
+# on the VSC Terminal
+
+ls: to see files ie pod.yaml diployment.yaml, and service.yaml
+
+kubectl apply -f deployment.yaml: Creates a deployment.yaml
+
+kubectl apply -f service.yaml: creates a service.yaml
+
+kubectl create -f deploymengt.yaml
+
+kubectl create -f service.yaml
+
+kubectl get pod: shows you all the pods running 
+
+kubectl delete pod (name of pod): Deletes pod
+
+kubectl get pod or kubectl get po: shows you pods running
+
+kubectl get service: To see if service was created 
+
+# To see if Container is running in External World 
+
+kubectl port-forward (name of pod) 8080:80
+
+
+
+
+
+
+
+# Kubernetes Node Commands 
+
+Describe node kubectl: describe node <node_name>
+Get node in yaml: kubectl get node <node_name> -o yaml
+Get node: kubectl get node <node_name>
+Drain node: kubectl drain node <node_name>
+Cordon node: kubectl cordon node <node_name>
+Uncordon node: kubectl uncordon node <node_name>
+
+
+
